@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=f, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:white">
+    <ul  class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langName){
+    const li=document.createElement('li')
+    li.innerHTML=`${langName}`
+    document.querySelector('.language').appendChild(li)
+
+    }
+    addlanguage("python")
+    addlanguage("Java")
+    //in the above process to add an element in the document it need to traverse the whole tree so sometime there occurs some optimize issue
+
+    //this is the optimized way
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+   addOptiLanguage("C")
+
+   //edit
+
+   const secondLang=document.querySelector("li:nth-child(2)")
+   //secondLang.innerHTML="Mojo"
+   const newli=document.createElement('li')
+   newli.textContent="Mojo"
+   secondLang.replaceWith(newli)
+
+
+    //edit
+    const firstlang=document.querySelector("li:first-child")
+    console.log(firstlang);
+    firstlang.outerHTML='<li>TypeScript</li>'
+
+    //remove
+
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
