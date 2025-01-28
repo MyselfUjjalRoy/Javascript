@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: black; color:white">
+    <h1>hello</h1>
+</body>
+<script>
+//     const div=document.createElement('div')
+//     console.log(div);
+//     div.className="main"
+//     div.id=Math.round(Math.random()*10+1)
+//     div.setAttribute("title","come to dubai")
+//     div.style.backgroundColor="green"
+//     div.style.padding="12px"
+//    // div.innerText="Chai Aur Code"
+//     const addText=document.createTextNode("Chai Aur Node")
+//     div.appendChild(addText)
+//     document.body.appendChild(div)
+
+
+//did some fun 
+
+
+    function addDiv(textContent, backgroundColor) {
+        const div = document.createElement('div'); // Create a new div element
+        console.log(div); // Log the created div for debugging
+
+        // Set the properties of the div
+        div.className = "main";
+        div.id = Math.round(Math.random() * 10 + 1); // Random ID
+        div.setAttribute("title", "come to dubai"); // Add a title attribute
+        div.style.backgroundColor = backgroundColor; // Set background color
+        div.style.padding = "12px"; // Set padding
+
+        // Add text content
+        const addText = document.createTextNode(textContent);
+        div.appendChild(addText);
+
+        // Append the div to the document body
+        document.body.appendChild(div);
+    }
+
+    // Example usage
+    addDiv("Chai Aur Code", "blue");
+    addDiv("Hello World", "red");
+    addDiv("Fun with DOM Manipulation", "purple");
+
+
+
+
+</script>
+</html>
