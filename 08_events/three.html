@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Javascript</title>
+</head>
+<body>
+    <h1>Chai Aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId = null;  // Variable to store interval ID
+
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    };
+
+    document.getElementById("start").addEventListener("click", function() {
+        if (intervalId === null) {  // Start only if it's not already running
+            intervalId = setInterval(sayDate, 1000, "Hii");
+        }
+    });
+
+    document.getElementById("stop").addEventListener("click", function() {
+        clearInterval(intervalId); // Stop the interval
+        intervalId = null;  // Reset the intervalId to allow restarting
+    });
+</script>
+</html>
