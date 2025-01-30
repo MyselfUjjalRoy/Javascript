@@ -78,7 +78,7 @@ form.addEventListener('submit', function (e) {
 #Solution code
 ##Project 5
 
-```
+```Javascript
 const insert = document.getElementById('insert');
 
 window.addEventListener('keydown', (e) => {
